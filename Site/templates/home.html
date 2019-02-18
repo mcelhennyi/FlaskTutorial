@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>Welcome to the Flask Tutorial!</h1>
+    <p class="lead">{{show_data}}</p>
+
+      <form action="/">
+        New Paragraph text:<br>
+        <input type="text" name="new_text" value={{show_data}}><br><br>
+        <input type="submit" value="Submit">
+      </form>
+  </div>
+{% endblock %}

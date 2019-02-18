@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>Your List</h1>
+
+    {% for item in list_items %}
+      <span class="help-inline">&#8226 {{ item.title }}</span>
+      <br>
+    {% endfor %}
+
+    <form action="/list">
+        Add New Item:<br>
+        <input type="text" name="item_name" placeholder="Item Name"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+  </div>
+{% endblock %}
